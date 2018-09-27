@@ -1,12 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Build o no') {
             steps {
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('Test') {
+        stage('Test para pardillos') {
             steps {
                 sh 'mvn test'
             }
@@ -16,7 +16,7 @@ pipeline {
                 }
             }
         }
-        stage('Deliver') {
+        stage('Deliver lo top') {
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
