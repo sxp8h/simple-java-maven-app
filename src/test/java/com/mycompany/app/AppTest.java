@@ -40,6 +40,16 @@ public class AppTest
         }
     }
 
+    @Test 
+    public void testQueVaAFallar(){
+	Random ran = new Random();
+	int x = ran.nextInt(3);
+	try{
+	    assertEquals(1, x)
+	} catch (AssertionError e){
+	    fail("number isnt 1")
+	}
+    }
     @After
     public void cleanUpStreams() {
         System.setOut(null);
